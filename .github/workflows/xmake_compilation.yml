@@ -24,6 +24,6 @@ jobs:
       - name: "Publish build object"
         uses: actions/upload-artifact@v4
         with:
-          name: "BornToBeLowLevel"
+          name: "BornToBeLowLevel-${{ matrix.os }}"
           path: "${{ github.workspace }}/build-action/*"
           if-no-files-found: warn
