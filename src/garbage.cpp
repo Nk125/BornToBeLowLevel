@@ -14,5 +14,6 @@ void garbage::print() const {
 		std::cout << garbage_to_print.at(uid(mt));
 		std::this_thread::sleep_for(std::chrono::milliseconds(ms_pause_garbage));
 		std::cout << "\b";
+		std::cout.flush();
 	}
 }

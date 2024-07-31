@@ -13,6 +13,7 @@ int main() {
 		garbage_printer.print();
 
 		std::cout << char_to_print;
+		std::cout.flush();
 	}
 
 	std::cout << "\n";
