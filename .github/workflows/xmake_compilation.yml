@@ -1,4 +1,4 @@
-name: "Compilation Test and Publish"
+name: "xmake Compilation test"
 on: [pull_request, push]
 jobs:
   compilation:
@@ -7,8 +7,11 @@ jobs:
         os: [windows-latest, ubuntu-latest]
         
     runs-on: ${{ matrix.os }}
-    name: "Compilation Test in Linux/Windows"
+    name: "Compile and Publish"
     steps:
+      - name: "Install xmake"
+        uses: xmake-io/github-action-setup-xmake@v1
+    
       - name: "Get source code"
         uses: actions/checkout@v4
     
