@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
     
       - name: "Configure"
-        run: "xmake f -m release -o build-action"
+        run: "xmake f -m release -o build-action -y"
       
       - name: "Build"
         run: "xmake"
